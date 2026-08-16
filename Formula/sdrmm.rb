@@ -12,12 +12,12 @@ class Sdrmm < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v0.4.0/sdrmm-0.4.0-aarch64-apple-darwin.tar.gz"
-      sha256 "19c519e0762ee7c1457e0f760d90caf947d564d1aa100537fa52aed03b92a839"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v0.4.1/sdrmm-0.4.1-aarch64-apple-darwin.tar.gz"
+      sha256 "286dbb322d3cd2ed5bf3a0eba91b682b78172a54d46217134be37b3baf1b8d74"
     end
     on_intel do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v0.4.0/sdrmm-0.4.0-x86_64-apple-darwin.tar.gz"
-      sha256 "9e801edb6013c6e429d40131b0d5bf669b295decff19b695fb796bb449166b34"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v0.4.1/sdrmm-0.4.1-x86_64-apple-darwin.tar.gz"
+      sha256 "5a15c25b8ea506d40aae31f553f4d796303d2769019e345119713d4e5c68830a"
     end
   end
 
@@ -25,12 +25,12 @@ class Sdrmm < Formula
     depends_on "patchelf" => :build
 
     on_arm do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v0.4.0/sdrmm-0.4.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "851f2b306fd51f09a0f235a2e48ae94a5610fc0db26b0f2664cf69599a526721"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v0.4.1/sdrmm-0.4.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "0bd30e8b08cd0708881777c4fb93eb1d9c46e696a32d7b02d13982eaa304562d"
     end
     on_intel do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v0.4.0/sdrmm-0.4.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9094a679da59d7c9cca9e2b6750eadf7524e0cb55228fdd3a2da21cec2a05730"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v0.4.1/sdrmm-0.4.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "871851a21f1518b0d565e6e95e9c088fcad72b53bf674cdc2316044ec253a05e"
     end
   end
 
