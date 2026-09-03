@@ -1,9 +1,9 @@
 cask "sdrminusminus" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.7.0"
-  sha256 arm:   "a68e2d0881e2e333baa2d943be837fc7830869cd4102400e9301d9a6a526f2f7",
-         intel: "ada2109a66e0b0f81e1d13d767da1e155e7175f058947a89b99a2419f76d41a6"
+  version "0.8.0"
+  sha256 arm:   "eab1f956058b86de3a0e4bc499ad2c8c30407069161d89f2fbee3eb90ec70b7b",
+         intel: "016e176710c86afd808291156af202d7e03ada72ddc4729f49195d73fea21846"
 
   url "https://github.com/Newspicel/sdrminusminus/releases/download/v#{version}/sdr--_#{version}_#{arch}.dmg"
   name "sdr--"
