@@ -1,12 +1,12 @@
 cask "sdrminusminus" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.1.2"
-  sha256 arm:   "42dd83ab8e278e3d9ae9ebc650bcea3d6ef2ce4ed9b997d65dfe0bc818e2441b",
-         intel: "362c4442ebe4b37cdf6b73e9df4d0ece4a3de534738e62138c840488c0a99139"
+  version "1.1.3"
+  sha256 arm:   "859c8efd9728b76c574f4acf13964fdca1dcfaeff52b72fa635c00fc00db3a82",
+         intel: "d30c8bc2b4118ae74e83211f148571b430160effd4556926abd68be66c843e57"
 
-  url "https://github.com/Newspicel/sdrminusminus/releases/download/v#{version}/sdr--_#{version}_#{arch}.dmg"
-  name "sdr--"
+  url "https://github.com/Newspicel/sdrminusminus/releases/download/v#{version}/SDR--_#{version}_#{arch}.dmg"
+  name "SDR--"
   name "sdr minus minus"
   desc "Modular, client-server software-defined radio"
   homepage "https://github.com/Newspicel/sdrminusminus"
@@ -17,9 +17,9 @@ cask "sdrminusminus" do
   end
 
   auto_updates true
-  depends_on macos: :catalina
+  depends_on macos: :big_sur
 
-  app "sdr--.app"
+  app "SDR--.app"
 
   zap trash: [
     "~/Library/Application Support/dev.newspicel.sdrmm",
