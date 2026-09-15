@@ -12,12 +12,12 @@ class Sdrmm < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.1.1/sdrmm-1.1.1-aarch64-apple-darwin.tar.gz"
-      sha256 "64a0b38a54945a612c410c132a0931cabcee2fb5f6eb13a42d5eb64a5ce72b7c"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.1.2/sdrmm-1.1.2-aarch64-apple-darwin.tar.gz"
+      sha256 "04821820e528dfea6aa3fe69614fb2a69281cffcd74162b9d116c3e5df66fe63"
     end
     on_intel do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.1.1/sdrmm-1.1.1-x86_64-apple-darwin.tar.gz"
-      sha256 "bad6881cb720701312cb752a1dc62106ad223a4fc4b8aae611b3dfb58e93fd60"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.1.2/sdrmm-1.1.2-x86_64-apple-darwin.tar.gz"
+      sha256 "a97f9485b3d25f34df9caf4ccad536ec669e8af78f7ae59c385ef98d50afcf68"
     end
   end
 
@@ -25,12 +25,12 @@ class Sdrmm < Formula
     depends_on "patchelf" => :build
 
     on_arm do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.1.1/sdrmm-1.1.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "6ac1681c06e67e4fa4bf768255d54163e96704b8c62ca7cd1c1cb3363197d68a"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.1.2/sdrmm-1.1.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "84d28fd1d56375a66ad5f77ae0b1b297147c59ba7ee2c175665410d1660be789"
     end
     on_intel do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.1.1/sdrmm-1.1.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "dd1858f4dd800d5c927842d7917e75f0c45cf57a0da9a0cd9bbd684624b9b09d"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.1.2/sdrmm-1.1.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "c900f57570925fd86597af1f655fed77adc3693c1a5922d59aaa0f9cafda9691"
     end
   end
 
@@ -49,9 +49,9 @@ class Sdrmm < Formula
 
   def caveats
     <<~EOS
-      RTL-SDR, HackRF, RTL-TCP and SpyServer receivers are built in. Other hardware is
-      reached through SoapySDR modules, which install separately:
-        brew install soapyremote
+      RTL-SDR, HackRF, Airspy, Airspy HF+, RTL-TCP and SpyServer receivers are built in.
+      Other hardware is reached through SoapySDR modules, which install separately:
+        brew install soapybladerf soapyremote
 
       Start the server on port 8080 with `sdrmm`, or in the background with
       `brew services start sdrmm`. `sdrmm --doctor` reports what this build can see.
