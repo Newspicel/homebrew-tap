@@ -1,7 +1,7 @@
 class Sdrmm < Formula
   desc "Modular, client-server software-defined radio"
   homepage "https://github.com/Newspicel/sdrminusminus"
-  license "GPL-3.0-or-later"
+  license "AGPL-3.0-or-later"
 
   livecheck do
     url :stable
@@ -12,12 +12,12 @@ class Sdrmm < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.7.0/sdrmm-1.7.0-aarch64-apple-darwin.tar.gz"
-      sha256 "1e7882096052c7f1f91b2b01bd7889662f913a00b19f8ddab0abc72fb34b1257"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.8.0/sdrmm-1.8.0-aarch64-apple-darwin.tar.gz"
+      sha256 "f16662c05422c288d75b5850872a487a1a68e8adcc36671880153d30a2ebe841"
     end
     on_intel do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.7.0/sdrmm-1.7.0-x86_64-apple-darwin.tar.gz"
-      sha256 "d7728145fd75350c99031341eb24d44ad554e34953e1ce777740539feb3aec5c"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.8.0/sdrmm-1.8.0-x86_64-apple-darwin.tar.gz"
+      sha256 "72a9ce8a612005f772a08e284291e6a759ab090a18cbde02a890600213483799"
     end
   end
 
@@ -25,17 +25,18 @@ class Sdrmm < Formula
     depends_on "patchelf" => :build
 
     on_arm do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.7.0/sdrmm-1.7.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "9349e4feb83013cf61b2f4c9066b38641c2dc8376374f8af4a7d89ad521e3eb6"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.8.0/sdrmm-1.8.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "6781c38d5caf71dfa7d2be90f39611977c0061898d384499ce08a64a4f8b11e3"
     end
     on_intel do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.7.0/sdrmm-1.7.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1c6554f5c51389d6f26fef8a899df83a50b95761fb1b9fe52a698f3ba3ff0640"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.8.0/sdrmm-1.8.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "aedf0b197285a98849f2f03ca410684ffc03273bf80818d4530eb5b7b567e5c4"
     end
   end
 
   def install
     bin.install "sdrmm"
+    (lib/"sdrmm").install Dir["*.dylib", "*.so*"]
     doc.install "LICENSE", "README.md", "THIRD_PARTY_NOTICES.md"
 
     if OS.mac?
@@ -43,7 +44,7 @@ class Sdrmm < Formula
       system "codesign", "--sign", "-", "--force", bin/"sdrmm"
     else
       system formula_opt_bin("patchelf")/"patchelf",
-             "--set-rpath", formula_opt_lib("soapysdr"), bin/"sdrmm"
+             "--set-rpath", "#{formula_opt_lib("soapysdr")}:#{lib}/sdrmm", bin/"sdrmm"
     end
   end
 
