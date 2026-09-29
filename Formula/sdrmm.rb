@@ -1,6 +1,6 @@
 class Sdrmm < Formula
   desc "Modular, client-server software-defined radio"
-  homepage "https://github.com/Newspicel/sdrminusminus"
+  homepage "https://sdrmm.com"
   license "AGPL-3.0-or-later"
 
   livecheck do
@@ -12,12 +12,12 @@ class Sdrmm < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.8.0/sdrmm-1.8.0-aarch64-apple-darwin.tar.gz"
-      sha256 "f16662c05422c288d75b5850872a487a1a68e8adcc36671880153d30a2ebe841"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.8.1/sdrmm-1.8.1-aarch64-apple-darwin.tar.gz"
+      sha256 "c39ed396b5450ebcef3e76a48364b3b82c4613c7506cba9ab968c4b25920f79c"
     end
     on_intel do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.8.0/sdrmm-1.8.0-x86_64-apple-darwin.tar.gz"
-      sha256 "72a9ce8a612005f772a08e284291e6a759ab090a18cbde02a890600213483799"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.8.1/sdrmm-1.8.1-x86_64-apple-darwin.tar.gz"
+      sha256 "a2fbe8121205b26f5710d44f4e8575d63ef497da9b853cbaa149cf6f758419ce"
     end
   end
 
@@ -25,12 +25,12 @@ class Sdrmm < Formula
     depends_on "patchelf" => :build
 
     on_arm do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.8.0/sdrmm-1.8.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "6781c38d5caf71dfa7d2be90f39611977c0061898d384499ce08a64a4f8b11e3"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.8.1/sdrmm-1.8.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "d60a2a8a367447b6849c28b2cc59badbae09d92739df2b160b35f49868d75db8"
     end
     on_intel do
-      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.8.0/sdrmm-1.8.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "aedf0b197285a98849f2f03ca410684ffc03273bf80818d4530eb5b7b567e5c4"
+      url "https://github.com/Newspicel/sdrminusminus/releases/download/v1.8.1/sdrmm-1.8.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "af0b838417c0b8fb535f6ada3067676179d51d9b5b3eeb44d42bbb925ba72be0"
     end
   end
 

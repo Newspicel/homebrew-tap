@@ -1,15 +1,15 @@
 cask "sdrminusminus" do
   arch arm: "aarch64", intel: "x64"
 
-  version "1.8.0"
-  sha256 arm:   "72837203e193705f192afa7d711212b0464d29530d527f694acd67720a4a431a",
-         intel: "6172ed866cf92920ef8dfbf19e44ac062be060ff37c1f15d948ac386c7b14876"
+  version "1.8.1"
+  sha256 arm:   "621f7daec897a1a354785dd87b2673f8173462e4ee82f8fc019aa1fa7d58f72a",
+         intel: "f1d37eec076f620f966be45740b94b71656a38d61bbe9d08868029745e3bdf40"
 
   url "https://github.com/Newspicel/sdrminusminus/releases/download/v#{version}/SDR--_#{version}_#{arch}.dmg"
   name "SDR--"
   name "sdr minus minus"
   desc "Modular, client-server software-defined radio"
-  homepage "https://github.com/Newspicel/sdrminusminus"
+  homepage "https://sdrmm.com"
 
   livecheck do
     url :url
