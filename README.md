@@ -15,6 +15,9 @@ The desktop application: a native window over the receiver engine and the full i
 brew install --cask sdrmm-app
 ```
 
+Formerly `sdrminusminus`. If upgrading from it, run
+`brew trust --cask newspicel/tap/sdrmm-app` once.
+
 Signed and notarized. The app updates itself, so Homebrew tracks the version but does not
 drive the upgrade.
 
