@@ -7,12 +7,12 @@ client–server software-defined radio.
 brew tap newspicel/tap
 ```
 
-## sdrminusminus (cask)
+## sdrmm-app (cask)
 
 The desktop application: a native window over the receiver engine and the full interface.
 
 ```sh
-brew install --cask sdrminusminus
+brew install --cask sdrmm-app
 ```
 
 Signed and notarized. The app updates itself, so Homebrew tracks the version but does not

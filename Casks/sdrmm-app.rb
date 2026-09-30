@@ -1,4 +1,4 @@
-cask "sdrminusminus" do
+cask "sdrmm-app" do
   arch arm: "aarch64", intel: "x64"
 
   version "1.9.0"
@@ -9,7 +9,7 @@ cask "sdrminusminus" do
   name "SDR--"
   name "sdr minus minus"
   desc "Modular, client-server software-defined radio"
-  homepage "https://sdrmm.com"
+  homepage "https://sdrmm.com/"
 
   livecheck do
     url :url
@@ -17,7 +17,7 @@ cask "sdrminusminus" do
   end
 
   auto_updates true
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "SDR--.app"
 
