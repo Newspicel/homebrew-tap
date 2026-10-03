@@ -1,0 +1,5 @@
+{
+  "sdrmm": "homebrew/core",
+  "sdrmm-app": "homebrew/cask",
+  "sdrminusminus": "homebrew/cask/sdrmm-app"
+}
